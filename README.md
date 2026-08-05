@@ -32,7 +32,7 @@
 <p align="center"><b><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; PINNED TECHNOLOGIES</b></p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,py,php,cpp,nextjs,react,tailwind,nestjs,nodejs,express,mysql,postgres,mongodb,redis,docker,linux,vercel" alt="Pinned technologies — TypeScript, JavaScript, Python, PHP, C++, Next.js, React, Tailwind, NestJS, Node.js, Express, MySQL, PostgreSQL, MongoDB, Redis, Docker, Linux, Vercel"/>
+  <img src="https://skillicons.dev/icons?i=ts,js,py,php,cpp,nextjs,react,tailwind,nodejs,express,mysql,postgres,mongodb,docker" alt="Pinned technologies — TypeScript, JavaScript, Python, PHP, C++, Next.js, React, Tailwind, Node.js, Express, MySQL, PostgreSQL, MongoDB, Docker"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
@@ -55,13 +55,13 @@
       </p>
       <p align="center"><img src="assets/icons/icon-server.svg" width="18" align="center"/>&nbsp; <b>BACKEND</b></p>
       <p align="center">
-        <img src="https://skillicons.dev/icons?i=nestjs,nodejs,express,laravel" alt="NestJS, Node.js, Express, Laravel"/>
+        <img src="https://skillicons.dev/icons?i=nodejs,express,laravel" alt="Node.js, Express, Laravel"/>
       </p>
     </td>
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-database.svg" width="18" align="center"/>&nbsp; <b>DATABASE</b></p>
       <p align="center">
-        <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,redis" alt="MySQL, PostgreSQL, MongoDB, Redis"/>
+        <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb" alt="MySQL, PostgreSQL, MongoDB"/>
       </p>
       <p align="center"><img src="assets/icons/icon-ai.svg" width="18" align="center"/>&nbsp; <b>AI &amp; ML</b></p>
       <p align="center">
@@ -73,14 +73,10 @@
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-cloud.svg" width="18" align="center"/>&nbsp; <b>DEVOPS</b></p>
       <p align="center">
-        <img src="https://skillicons.dev/icons?i=docker,linux,githubactions,nginx" alt="Docker, Linux, GitHub Actions, Nginx"/>
+        <img src="https://skillicons.dev/icons?i=docker,githubactions,nginx" alt="Docker, GitHub Actions, Nginx"/>
       </p>
     </td>
     <td valign="top" width="34%">
-      <p align="center"><img src="assets/icons/icon-cloud.svg" width="18" align="center"/>&nbsp; <b>CLOUD</b></p>
-      <p align="center">
-        <img src="https://skillicons.dev/icons?i=vercel,cloudflare" alt="Vercel, Cloudflare"/>
-      </p>
       <p align="center"><img src="assets/icons/icon-server.svg" width="18" align="center"/>&nbsp; <b>PRINCIPLES</b></p>
       <p align="center">
         <img src="https://img.shields.io/badge/Clean%20Architecture%20%C2%B7%20REST%20%C2%B7%20GraphQL%20%C2%B7%20Testing-C41E3A?style=flat-square" alt="Clean Architecture · REST · GraphQL · Testing"/>
@@ -89,7 +85,7 @@
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-ai.svg" width="18" align="center"/>&nbsp; <b>TOOLS</b></p>
       <p align="center">
-        <img src="https://skillicons.dev/icons?i=git,postman,figma,jupyter" alt="Git, Postman, Figma, Jupyter"/>
+        <img src="https://skillicons.dev/icons?i=git,postman,jupyter" alt="Git, Postman, Jupyter"/>
       </p>
     </td>
   </tr>
