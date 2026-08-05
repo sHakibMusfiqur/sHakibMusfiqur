@@ -97,15 +97,6 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 9 · GITHUB STATS -->
-<p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; GITHUB STATS</b></p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg" width="100%" alt="GitHub Stats — Repositories, Commits, Stars, Pull Requests, Issues, Contributions, and Most Used Languages"/>
-</p>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
 <!-- 13 · CONTRIBUTION SNAKE -->
 <p align="center"><b><img src="assets/icons/icon-server.svg" width="20" align="center"/>&nbsp; CONTRIBUTION SNAKE</b></p>
 
@@ -117,11 +108,4 @@
   </picture>
 </p>
 
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 14 · ACTIVITY GRAPH (auto-generated from GitHub GraphQL API) -->
-<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; ACTIVITY GRAPH</b></p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/output/activity.svg" width="100%" alt="Activity Graph — Real-time GitHub contribution analytics for Musfiqur Shakib"/>
-</p>
