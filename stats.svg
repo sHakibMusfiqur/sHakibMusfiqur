@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 376" width="980" height="376" role="img" aria-label="GitHub stats for sHakibMusfiqur">
+<rect width="980" height="376" rx="6" fill="#161B22"/>
+<rect width="980" height="1" fill="#30363D" opacity="0.4"/>
+<text x="32" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#E6EDF3">GitHub Stats</text>
+<text x="32" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8B949E">github.com/sHakibMusfiqur</text>
+<line x1="480" y1="52" x2="480" y2="304" stroke="#30363D" stroke-width="1"/>
+<rect x="0" y="60" width="480" height="42" fill="#1C2128"/>
+<text x="32" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8B949E">Repositories</text>
+<text x="460" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#E6EDF3" text-anchor="end">13</text>
+<rect x="0" y="102" width="480" height="42" fill="#161B22"/>
+<text x="32" y="129" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8B949E">Commits</text>
+<text x="460" y="129" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#E6EDF3" text-anchor="end">372</text>
+<rect x="0" y="144" width="480" height="42" fill="#1C2128"/>
+<text x="32" y="171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8B949E">Pull Requests</text>
+<text x="460" y="171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#E6EDF3" text-anchor="end">0</text>
+<rect x="0" y="186" width="480" height="42" fill="#161B22"/>
+<text x="32" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8B949E">Issues</text>
+<text x="460" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#E6EDF3" text-anchor="end">0</text>
+<rect x="0" y="228" width="480" height="42" fill="#1C2128"/>
+<text x="32" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8B949E">Contributions</text>
+<text x="460" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#E6EDF3" text-anchor="end">128</text>
+<rect x="480" y="60" width="480" height="42" fill="#1C2128"/>
+<rect x="512" y="70" width="436" height="8" rx="4" fill="#DA5B0B" opacity="0.15"/>
+<rect x="512" y="70" width="109" height="8" rx="4" fill="#DA5B0B"/>
+<text x="512" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#E6EDF3">Jupyter Notebook</text>
+<text x="948" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B949E" text-anchor="end">25%</text>
+<rect x="480" y="102" width="480" height="42" fill="#161B22"/>
+<rect x="512" y="112" width="436" height="8" rx="4" fill="#E34F26" opacity="0.15"/>
+<rect x="512" y="112" width="109" height="8" rx="4" fill="#E34F26"/>
+<text x="512" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#E6EDF3">HTML</text>
+<text x="948" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B949E" text-anchor="end">25%</text>
+<rect x="480" y="144" width="480" height="42" fill="#1C2128"/>
+<rect x="512" y="154" width="436" height="8" rx="4" fill="#3178C6" opacity="0.15"/>
+<rect x="512" y="154" width="72" height="8" rx="4" fill="#3178C6"/>
+<text x="512" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#E6EDF3">TypeScript</text>
+<text x="948" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B949E" text-anchor="end">17%</text>
+<rect x="480" y="186" width="480" height="42" fill="#161B22"/>
+<rect x="512" y="196" width="436" height="8" rx="4" fill="#777BB4" opacity="0.15"/>
+<rect x="512" y="196" width="36" height="8" rx="4" fill="#777BB4"/>
+<text x="512" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#E6EDF3">PHP</text>
+<text x="948" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B949E" text-anchor="end">8%</text>
+<rect x="480" y="228" width="480" height="42" fill="#1C2128"/>
+<rect x="512" y="238" width="436" height="8" rx="4" fill="#58A6FF" opacity="0.15"/>
+<rect x="512" y="238" width="36" height="8" rx="4" fill="#58A6FF"/>
+<text x="512" y="262" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#E6EDF3">Blade</text>
+<text x="948" y="262" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B949E" text-anchor="end">8%</text>
+<rect x="480" y="270" width="480" height="42" fill="#161B22"/>
+<rect x="512" y="280" width="436" height="8" rx="4" fill="#58A6FF" opacity="0.15"/>
+<rect x="512" y="280" width="72" height="8" rx="4" fill="#58A6FF"/>
+<text x="512" y="304" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#E6EDF3">Other</text>
+<text x="948" y="304" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B949E" text-anchor="end">17%</text>
+<line x1="0" y1="375" x2="980" y2="375" stroke="#30363D" stroke-width="1"/>
+</svg>
