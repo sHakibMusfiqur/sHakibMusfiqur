@@ -324,15 +324,6 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 10 · GITHUB STREAK -->
-<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; GITHUB STREAK</b></p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=sHakibMusfiqur&amp;background=ffffff&amp;border=E2E8F0&amp;stroke=C41E3A&amp;ring=C41E3A&amp;fire=C41E3A&amp;currStreakNum=0B1220&amp;sideNums=334155&amp;currStreakLabel=C41E3A&amp;sideLabels=64748B&amp;dates=64748B&amp;hide_border=true&amp;border_radius=16&amp;card_width=445&amp;mode=daily" alt="GitHub Streak" width="460"/>
-</p>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
 <!-- 13 · CONTRIBUTION SNAKE -->
 <p align="center"><b><img src="assets/icons/icon-server.svg" width="20" align="center"/>&nbsp; CONTRIBUTION SNAKE</b></p>
 
