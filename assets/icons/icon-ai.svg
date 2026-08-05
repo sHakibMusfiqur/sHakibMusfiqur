@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" role="img" aria-label="AI chip icon">
+  <rect x="7" y="7" width="10" height="10" rx="2.5" stroke="#C41E3A" stroke-width="1.7"/>
+  <path d="M12 10v.01M10 12h.01M14 12h.01M12 14h.01" stroke="#C41E3A" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M9 3v2.5M15 3v2.5M9 18.5V21M15 18.5V21M3 9h2.5M3 15h2.5M18.5 9H21M18.5 15H21" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round"/>
+</svg>
