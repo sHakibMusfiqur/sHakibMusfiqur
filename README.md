@@ -329,33 +329,20 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 9 · GITHUB STATISTICS · 10 · GITHUB STREAK -->
-<p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; GITHUB STATISTICS &amp; STREAK</b></p>
-
-<table align="center" width="100%">
-  <tr>
-    <td align="center" valign="middle" width="50%">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats-dark.svg"/>
-        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg"/>
-        <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg" alt="GitHub Statistics" width="470"/>
-      </picture>
-    </td>
-    <td align="center" valign="middle" width="50%">
-      <img src="https://streak-stats.demolab.com?user=sHakibMusfiqur&amp;background=ffffff&amp;border=E2E8F0&amp;stroke=C41E3A&amp;ring=C41E3A&amp;fire=C41E3A&amp;currStreakNum=0B1220&amp;sideNums=334155&amp;currStreakLabel=C41E3A&amp;sideLabels=64748B&amp;dates=64748B&amp;hide_border=true&amp;border_radius=16&amp;card_width=445&amp;mode=daily" alt="GitHub Streak" width="460"/>
-    </td>
-  </tr>
-</table>
-
-<!-- 11 · TOP LANGUAGES -->
-<p align="center"><b><img src="assets/icons/icon-code.svg" width="20" align="center"/>&nbsp; TOP LANGUAGES</b></p>
+<!-- 9 · GITHUB STATS DASHBOARD -->
+<p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; GITHUB STATS</b></p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs.svg"/>
-    <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs.svg" alt="Top Languages" width="640"/>
-  </picture>
+  <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg" width="100%" alt="GitHub Stats Dashboard"/>
+</p>
+
+<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
+
+<!-- 10 · GITHUB STREAK -->
+<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; GITHUB STREAK</b></p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=sHakibMusfiqur&amp;background=ffffff&amp;border=E2E8F0&amp;stroke=C41E3A&amp;ring=C41E3A&amp;fire=C41E3A&amp;currStreakNum=0B1220&amp;sideNums=334155&amp;currStreakLabel=C41E3A&amp;sideLabels=64748B&amp;dates=64748B&amp;hide_border=true&amp;border_radius=16&amp;card_width=445&amp;mode=daily" alt="GitHub Streak" width="460"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>

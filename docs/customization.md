@@ -94,16 +94,19 @@ You can also trigger it manually from the **Actions** tab.
 
 ## 6. Statistics Cards
 
-**Stats & Top Languages are self-hosted** by `.github/workflows/stats.yml`. The
-job queries the GitHub API directly, renders the two cards (light + dark), and
-pushes them to the `stats` branch. They render from:
+**The GitHub stats dashboard is self-hosted** by `.github/workflows/stats.yml`.
+The job queries the GitHub API directly (REST search for stars/commits/PRs/issues,
+GraphQL for contributions and languages) and renders a single dark analytics-panel
+card, then pushes it to the `stats` branch. It renders from:
 
 ```
 https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg
-https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats-dark.svg
-https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs.svg
-https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs-dark.svg
 ```
+
+The card is theme-independent dark (`#0D1117`) by design, with red `#C41E3A`
+and violet `#7C3AED` accents. It shows five metrics on the left (stars, commits,
+pull requests, issues, contributions this year) with a circular language
+indicator, and animated language bars on the right.
 
 Trigger it from the **Actions** tab (workflow_dispatch) or let it run on the
 daily schedule.
