@@ -153,11 +153,11 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 14 · ACTIVITY GRAPH -->
+<!-- 14 · ACTIVITY GRAPH (auto-generated from GitHub GraphQL API) -->
 <p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; ACTIVITY GRAPH</b></p>
 
 <p align="center">
-  <img src="assets/activity-graph.svg" width="100%" alt="Activity Graph — Daily contribution analytics for Musfiqur Shakib"/>
+  <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/output/activity.svg" width="100%" alt="Activity Graph — Real-time GitHub contribution analytics for Musfiqur Shakib"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
