@@ -73,7 +73,7 @@
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-cloud.svg" width="18" align="center"/>&nbsp; <b>DEVOPS</b></p>
       <p align="center">
-        <img src="https://skillicons.dev/icons?i=docker,githubactions,nginx" alt="Docker, GitHub Actions, Nginx"/>
+        <img src="https://skillicons.dev/icons?i=docker,githubactions" alt="Docker, GitHub Actions"/>
       </p>
     </td>
     <td valign="top" width="34%">
