@@ -2,11 +2,7 @@
 
 <!-- 1 · HERO BANNER -->
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner.svg"/>
-    <img src="assets/banner.svg" width="100%" alt="Musfiqur Shakib — Software Engineer banner"/>
-  </picture>
+  <img src="assets/banner-dark.svg" width="100%" alt="Musfiqur Shakib — Software Engineer banner"/>
 </p>
 
 <!-- 2 · ANIMATED TYPING -->
@@ -37,14 +33,6 @@
 
 <!-- 4 · ABOUT ME -->
 <p align="center"><b>ABOUT ME</b></p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/profile-bg-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="assets/profile-bg.svg"/>
-    <img src="assets/profile-bg.svg" width="100%" alt="Profile background"/>
-  </picture>
-</p>
 
 <table align="center" width="100%">
   <tr>
@@ -183,8 +171,6 @@
 
 <!-- 8 · FEATURED PROJECTS -->
 <p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; FEATURED PROJECTS</b></p>
-
-<p align="center"><img src="assets/project-card.svg" width="620" alt="Project card illustration"/></p>
 
 <table align="center" width="100%">
   <tr>
@@ -343,15 +329,6 @@
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=sHakibMusfiqur&amp;background=ffffff&amp;border=E2E8F0&amp;stroke=C41E3A&amp;ring=C41E3A&amp;fire=C41E3A&amp;currStreakNum=0B1220&amp;sideNums=334155&amp;currStreakLabel=C41E3A&amp;sideLabels=64748B&amp;dates=64748B&amp;hide_border=true&amp;border_radius=16&amp;card_width=445&amp;mode=daily" alt="GitHub Streak" width="460"/>
-</p>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
-<!-- 12 · GITHUB ACHIEVEMENTS -->
-<p align="center"><b><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; GITHUB ACHIEVEMENTS</b></p>
-
-<p align="center">
-  <img src="assets/achievements.svg" width="100%" alt="GitHub Achievements"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
