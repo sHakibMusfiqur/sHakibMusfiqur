@@ -159,5 +159,3 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/output/activity.svg" width="100%" alt="Activity Graph — Real-time GitHub contribution analytics for Musfiqur Shakib"/>
 </p>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>

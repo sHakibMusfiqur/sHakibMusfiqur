@@ -2,12 +2,12 @@
 # The SVG is committed to the `output` branch and rendered via raw.githubusercontent.com.
 #
 # Data sources:
-#   - GitHub GraphQL API: contributionCalendar (daily contributions, last 30 days)
-#   - Computed: current streak, longest streak, active days, total contributions
+#   - GitHub GraphQL API: contributionsCollection.contributionCalendar (current year)
+#   - GitHub REST API: /users/{user}/events/public (fallback)
 #
-# Every number in the SVG comes from the live GitHub API — nothing is hardcoded.
+# Every number in the SVG comes from the live GitHub API -- nothing is hardcoded.
 #
-# IMPORTANT: Uses manual git push — NOT ghaction-github-pages — to avoid overwriting
+# IMPORTANT: Uses manual git push -- NOT ghaction-github-pages -- to avoid overwriting
 # other files on the output branch (e.g. contribution snake SVGs).
 
 name: Generate Activity Graph
@@ -35,24 +35,31 @@ jobs:
 
       - name: Generate activity graph SVG
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OWNER: ${{ github.repository_owner }}
         run: |
           python3 .github/scripts/generate_activity.py "$OWNER" dist
+          echo "Generated files:"
           ls -la dist/
+          echo "---"
+          head -c 200 dist/activity.svg
 
-      - name: Checkout output branch
+      - name: Push SVG to the output branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git checkout output 2>/dev/null || git checkout -b output origin/output
-
-      - name: Copy SVG and push if changed
-        run: |
-          cp dist/activity.svg activity.svg
+          cd dist
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch origin output --depth=1
+          git checkout output
+          cp activity.svg ../activity.svg
+          cd ..
           if git diff --quiet activity.svg 2>/dev/null; then
-            echo "No changes to activity.svg — skipping commit"
+            echo "No changes to activity.svg -- skipping commit"
           else
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
             git add activity.svg
             git commit -m "chore: update activity graph [skip ci]"
             git push origin output
@@ -63,6 +70,6 @@ jobs:
         run: |
           echo "## Activity Graph Updated" >> $GITHUB_STEP_SUMMARY
           echo "- Generated from real GitHub contributions of **${{ github.repository_owner }}**" >> $GITHUB_STEP_SUMMARY
-          echo "- Data source: GitHub GraphQL API \`contributionsCollection\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Data source: GitHub GraphQL API + REST API fallback" >> $GITHUB_STEP_SUMMARY
           echo "- Committed **activity.svg** to the **output** branch" >> $GITHUB_STEP_SUMMARY
-          echo "- All statistics are live — no hardcoded values" >> $GITHUB_STEP_SUMMARY
+          echo "- All statistics are live -- no hardcoded values" >> $GITHUB_STEP_SUMMARY
