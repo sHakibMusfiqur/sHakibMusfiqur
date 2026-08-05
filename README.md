@@ -8,7 +8,7 @@
 <!-- 2 · ANIMATED TYPING -->
 <p align="center">
   <a href="https://github.com/sHakibMusfiqur">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=24&amp;duration=3200&amp;pause=700&amp;color=C41E3A&amp;center=true&amp;vCenter=true&amp;multiline=false&amp;width=1000&amp;height=70&amp;lines=Full+Stack+Developer;AI+Engineer;Platform+Engineer;Backend+Engineer;Solution+Architect;Enterprise+Software+%26+SaaS" alt="Animated typing — Musfiqur Shakib roles"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=24&amp;duration=3200&amp;pause=700&amp;color=C41E3A&amp;center=true&amp;vCenter=true&amp;multiline=false&amp;width=1000&amp;height=70&amp;lines=Software+Engineer;Full+Stack+Developer" alt="Animated typing — Musfiqur Shakib roles"/>
   </a>
 </p>
 
@@ -22,28 +22,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Musfiqur%20Shakib-Software%20Engineer-C41E3A?style=flat-square" alt="Musfiqur Shakib — Software Engineer"/>
-  <img src="https://img.shields.io/badge/Full%20Stack%20%E2%80%A2%20AI%20%E2%80%A2%20Platform-0B1220?style=flat-square" alt="Full Stack / AI / Platform"/>
+  <img src="https://img.shields.io/badge/Full%20Stack%20Developer-0B1220?style=flat-square" alt="Full Stack Developer"/>
   <img src="https://img.shields.io/badge/Open%20to%20Opportunities-22C55E?style=flat-square&amp;logo=rocket&amp;logoColor=white" alt="Open to opportunities"/>
-  <img src="https://komarev.com/ghpvc/?username=sHakibMusfiqur&amp;color=C41E3A&amp;style=flat-square&amp;label=Profile+Views" alt="Profile views"/>
 </p>
 
 </div>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
-<!-- 4 · ABOUT ME -->
-<p align="center"><b>ABOUT ME</b></p>
-
-<p align="center">
-  Hi, I'm <b>Musfiqur Shakib</b> — I enjoy turning complex problems into
-  elegant, production-grade systems.
-</p>
-<p align="center">
-  My sweet spot is the intersection of <b>engineering discipline</b> and
-  <b>product taste</b> — writing code that is fast, testable, and a joy to maintain.
-</p>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- PINNED TECHNOLOGIES -->
 <p align="center"><b><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; PINNED TECHNOLOGIES</b></p>
@@ -114,11 +97,11 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 9 · GITHUB STATS DASHBOARD -->
+<!-- 9 · GITHUB STATS -->
 <p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; GITHUB STATS</b></p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg" width="100%" alt="GitHub Stats Dashboard"/>
+  <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg" width="100%" alt="GitHub Stats — Repositories, Commits, Stars, Pull Requests, Issues, Contributions, and Most Used Languages"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>

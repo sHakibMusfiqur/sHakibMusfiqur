@@ -1,11 +1,9 @@
-# Generates and commits a self-hosted GitHub stats dashboard as a single SVG.
-# This removes the dependency on the flaky public github-readme-stats instance,
-# so the stats card always renders. Output is pushed to the `stats` branch and
-# read via raw.githubusercontent.com.
+# Generates and commits a self-hosted GitHub stats SVG as a single file.
+# Output is pushed to the `stats` branch and read via raw.githubusercontent.com.
 #
-# The card uses a dark #0D1117 "analytics panel" theme with a red accent
-# (#C41E3A) and violet secondary (#7C3AED). It is built purely from the GitHub
-# API (search + GraphQL), so no broken third-party widgets are involved.
+# Design: Clean, table-based layout inspired by GitHub Insights.
+# No donut charts, no animated bars, no AI dashboard aesthetics.
+# Pure typography + horizontal progress bars for language distribution.
 
 name: Generate Stats Dashboard
 
@@ -37,12 +35,12 @@ jobs:
           #!/usr/bin/env python3
           import json, math, os, sys, urllib.parse, urllib.request
 
-          # palette
-          BG="#0D1117"; BORDER="#21262D"; TRACK="#161B22"
-          RED="#C41E3A"; VIOLET="#7C3AED"
-          INK="#E6EDF3"; SUB="#F1F5F9"; MUTED="#8B949E"
-          SANS="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif"
-          MONO="ui-monospace, SFMono-Regular, 'SF Mono', Consolas, monospace"
+          # GitHub-native palette
+          BG="#0D1117"; CARD="#161B22"; BORDER="#30363D"
+          TEXT="#E6EDF3"; MUTED="#8B949E"; DIM="#484F58"
+          ACCENT="#58A6FF"; GREEN="#3FB950"; PURPLE="#BC8CFF"
+          SANS="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          MONO="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace"
           API="https://api.github.com"
 
           def request(url, token, data=None, accept="application/vnd.github+json"):
@@ -59,11 +57,12 @@ jobs:
           user=sys.argv[1]; token=os.environ.get("GITHUB_TOKEN",""); outdir=sys.argv[2]
           outfile=os.path.join(outdir,"stats.svg")
 
-          # ---- Repo-level data: stars + primary languages (REST) ----
-          stars=0; langs={}; page=1
+          # ---- Fetch data from GitHub API ----
+          stars=0; repos=0; langs={}; page=1
           while True:
               data=request(f"{API}/users/{user}/repos?per_page=100&page={page}&type=owner", token)
               if not isinstance(data, list) or not data: break
+              repos+=len(data)
               for repo in data:
                   stars+=int(repo.get("stargazers_count",0) or 0)
                   lg=repo.get("language")
@@ -71,7 +70,6 @@ jobs:
               if len(data)<100: break
               page+=1
 
-          #   All-time activity counters (REST search API)
           def search_total(path, q, accept="application/vnd.github+json"):
               try:
                   d=request(f"{API}/search/{path}?q="+urllib.parse.quote(q)+"&per_page=1", token, accept=accept)
@@ -82,7 +80,6 @@ jobs:
           prs=search_total("issues", f"author:{user} type:pr")
           issues=search_total("issues", f"author:{user} type:issue")
 
-          # Contributions in the last year (GraphQL API)
           contribs=0
           try:
               query='query{user(login:"%s"){contributionsCollection{contributionCalendar{totalContributions}}}}'%user
@@ -91,7 +88,7 @@ jobs:
           except Exception:
               contribs=0
 
-          #   Language distribution
+          # Language distribution
           total=sum(langs.values()) or 1
           top=sorted(langs.items(), key=lambda kv: kv[1], reverse=True)[:5]
           names=[n for n,_ in top]; pcts=[c/total*100 for _,c in top]
@@ -106,63 +103,64 @@ jobs:
                  "Rust":"#DEA584","SQL":"#E38C00","HTML":"#E34F26","CSS":"#1572B6",
                  "Jupyter Notebook":"#DA5B0B","Shell":"#89E051","Dockerfile":"#2496ED",
                  "Kotlin":"#A97BFF","Swift":"#F05138","Dart":"#00B4AB","Vue":"#41B883","Ruby":"#CC342D"}
-          def brand(name):
-              return BRAND.get(name, VIOLET)
+          def brand(name): return BRAND.get(name, ACCENT)
 
-          #   SVG assembly ------------
-          W,H=980,360
-          out=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" role="img" aria-label="GitHub stats dashboard for %s">'%(W,H,W,H,esc(user))]
-          out.append('<rect x="1" y="1" width="%d" height="%d" rx="24" fill="%s" stroke="%s" stroke-width="1"/>'%(W-2,H-2,BG,BORDER))
-          out.append('<rect x="1" y="1" width="%d" height="6" rx="3" fill="%s"/>'%(W-2,RED))
-          # titles
-          out.append('<rect x="48" y="40" width="4" height="18" rx="2" fill="%s"/>'%RED)
-          out.append('<text x="62" y="55" font-family="%s" font-size="14" font-weight="700" fill="%s" letter-spacing="2">GITHUB STATS</text>'%(SANS,INK))
-          out.append('<rect x="608" y="40" width="4" height="18" rx="2" fill="%s"/>'%VIOLET)
-          out.append('<text x="622" y="55" font-family="%s" font-size="14" font-weight="700" fill="%s" letter-spacing="2">MOST USED LANGUAGES</text>'%(SANS,INK))
-          out.append('<line x1="560" y1="72" x2="560" y2="330" stroke="%s" stroke-width="1"/>'%BORDER)
+          # ---- SVG assembly: table-based layout ----
+          W=980; ROW_H=42; PAD=32; HEADER_H=52
+          STAT_ROWS=5; LANG_ROWS=len(names)
+          TOTAL_ROWS=max(STAT_ROWS, LANG_ROWS)
+          H=HEADER_H+PAD+TOTAL_ROWS*ROW_H+PAD+8
 
-          # left: stat rows
-          labels=["Total Stars","Total Commits","Pull Requests","Issues","Contributions This Year"]
-          values=[stars,commits,prs,issues,contribs]
-          y=112
-          for label,val in zip(labels,values):
-              out.append(f'<text x="48" y="{y}" font-family="{SANS}" font-size="13.5" font-weight="500" fill="{MUTED}">{esc(label)}</text>')
-              out.append(f'<text x="360" text-anchor="end" y="{y}" font-family="{MONO}" font-size="16" font-weight="700" fill="{INK}">{esc(fmt(val))}</text>')
-              y+=36
+          out=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" role="img" aria-label="GitHub stats for %s">'%(W,H,W,H,esc(user))]
 
-          # left: circular language donut
-          cx,cy,R=455,168,70.0; C=2*math.pi*R
-          palette=[RED,VIOLET,"#E2E8F0","#94A3B8","#64748B","#334155"]
-          angle=0.0
-          for i,pct in enumerate(pcts[:6]):
-              ln=max(C*pct/100.0, 0.0); col=palette[i%len(palette)]
-              out.append(f'<circle cx="{cx}" cy="{cy}" r="{R:.1f}" fill="none" stroke="{col}" stroke-width="15" stroke-dasharray="{ln:.1f} {C-ln:.1f}" transform="rotate({angle:.1f} {cx} {cy})"/>')
-              angle+=pct*3.6
-          out.append(f'<text x="{cx}" text-anchor="middle" y="{cy-8}" font-family="{SANS}" font-size="12" font-weight="700" fill="{MUTED}" letter-spacing="1">{esc(names[0].upper())}</text>')
-          out.append(f'<text x="{cx}" text-anchor="middle" y="{cy+14}" font-family="{MONO}" font-size="18" font-weight="800" fill="{RED}">{pcts[0]:.0f}%</text>')
-          # donut legend
-          lx,ly=398,300
-          for name,pct in zip(names[:3],pcts[:3]):
-              out.append(f'<circle cx="{lx}" cy="{ly-3}" r="3.5" fill="{brand(name)}"/>')
-              out.append(f'<text x="{lx+12}" y="{ly}" font-family="{SANS}" font-size="11.5" font-weight="500" fill="{MUTED}">{esc(name)}</text>')
-              out.append(f'<text x="{lx+130}" text-anchor="end" y="{ly}" font-family="{MONO}" font-size="11.5" font-weight="600" fill="{INK}">{pct:.0f}%</text>')
-              ly+=26
+          # Background
+          out.append('<rect width="%d" height="%d" rx="6" fill="%s"/>'%(W,H,CARD))
+          out.append('<rect width="%d" height="1" fill="%s" opacity="0.4"/>'%(W,BORDER))
 
-          # right: animated language bars
-          y=108
-          for name,pct in zip(names,pcts):
-              bw=300*pct/100.0
-              out.append(f'<circle cx="612" cy="{y-3}" r="4" fill="{brand(name)}"/>')
-              out.append(f'<text x="628" y="{y}" font-family="{SANS}" font-size="13.5" font-weight="600" fill="{INK}">{esc(name)}</text>')
-              out.append(f'<text x="928" text-anchor="end" y="{y}" font-family="{MONO}" font-size="13" font-weight="700" fill="{MUTED}">{pct:.0f}%</text>')
-              out.append(f'<rect x="628" y="{y+10}" width="300" height="7" rx="3.5" fill="{TRACK}"/>')
-              out.append(f'<rect x="628" y="{y+10}" width="{bw:.1f}" height="7" rx="3.5" fill="{RED}"><animate attributeName="width" from="0" to="{bw:.1f}" dur="1.2s" repeatCount="1" fill="freeze"/></rect>')
-              y+=40
+          # Header
+          out.append('<text x="%d" y="%d" font-family="%s" font-size="14" font-weight="600" fill="%s">GitHub Stats</text>'%(PAD,34,SANS,TEXT))
+          out.append('<text x="%d" y="%d" font-family="%s" font-size="11" fill="%s">github.com/%s</text>'%(PAD,50,SANS,MUTED,esc(user)))
 
-          out.append(f'<text x="48" y="{H-16}" font-family="{SANS}" font-size="10.5" fill="{MUTED}">github.com/{esc(user)}</text>')
+          # Vertical divider
+          div_x=480
+          out.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1"/>'%(div_x,HEADER_H,div_x,HEADER_H+TOTAL_ROWS*ROW_H,BORDER))
+
+          # Left column: Statistics table
+          stats=[
+              ("Repositories", fmt(repos)),
+              ("Commits", fmt(commits)),
+              ("Pull Requests", fmt(prs)),
+              ("Issues", fmt(issues)),
+              ("Contributions", fmt(contribs)),
+          ]
+          y=HEADER_H+8
+          for i,(label,val) in enumerate(stats):
+              bg=' fill="%s"'%("#1C2128" if i%2==0 else CARD)
+              out.append('<rect x="0" y="%d" width="%d" height="%d"%s/>'%(y,div_x,ROW_H,bg))
+              out.append('<text x="%d" y="%d" font-family="%s" font-size="13" fill="%s">%s</text>'%(PAD,y+27,SANS,MUTED,esc(label)))
+              out.append('<text x="%d" y="%d" font-family="%s" font-size="14" font-weight="600" fill="%s" text-anchor="end">%s</text>'%(div_x-20,y+27,SANS,TEXT,esc(val)))
+              y+=ROW_H
+
+          # Right column: Language distribution (horizontal bars)
+          y=HEADER_H+8
+          bar_x=div_x+PAD; bar_w=W-div_x-PAD*2
+          for i,(name,pct) in enumerate(zip(names,pcts)):
+              bg=' fill="%s"'%("#1C2128" if i%2==0 else CARD)
+              out.append('<rect x="%d" y="%d" width="%d" height="%d"%s/>'%(div_x,y,div_x,ROW_H,bg))
+              color=brand(name)
+              out.append('<rect x="%d" y="%d" width="%d" height="8" rx="4" fill="%s" opacity="0.15"/>'%(bar_x,y+10,bar_w,color))
+              bw=max(bar_w*pct/100.0,2)
+              out.append('<rect x="%d" y="%d" width="%d" height="8" rx="4" fill="%s"/>'%(bar_x,y+10,bw,color))
+              out.append('<text x="%d" y="%d" font-family="%s" font-size="12" fill="%s">%s</text>'%(bar_x,y+34,SANS,TEXT,esc(name)))
+              out.append('<text x="%d" y="%d" font-family="%s" font-size="11" font-weight="600" fill="%s" text-anchor="end">%s%%</text>'%(bar_x+bar_w,y+34,SANS,MUTED,round(pct)))
+              y+=ROW_H
+
+          # Bottom border
+          out.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1"/>'%(H-1,W,H-1,BORDER))
+
           out.append("</svg>")
           open(outfile,"w",encoding="utf-8").write("\n".join(out))
-          print(f"Generated dashboard for {user}: {outfile}")
+          print(f"Generated stats for {user}: {outfile}")
           PY
           mkdir -p dist
           GITHUB_TOKEN="$GH_TOKEN" python3 /tmp/gen_stats.py "$OWNER" dist
@@ -179,4 +177,5 @@ jobs:
         run: |
           echo "## GitHub Stats Dashboard" >> $GITHUB_STEP_SUMMARY
           echo "- Committed **stats.svg** to the **stats** branch" >> $GITHUB_STEP_SUMMARY
-          echo "- Sources: GitHub REST (stars, commits, PR, issues) + GraphQL (contributions, languages)" >> $GITHUB_STEP_SUMMARY
+          echo "- Sources: GitHub REST (repos, stars, commits, PR, issues) + GraphQL (contributions)" >> $GITHUB_STEP_SUMMARY
+          echo "- Layout: Clean table-based design, no donut charts or animated elements" >> $GITHUB_STEP_SUMMARY
