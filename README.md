@@ -63,20 +63,22 @@
       <p align="center">
         <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb" alt="MySQL, PostgreSQL, MongoDB"/>
       </p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-ai.svg" width="18" align="center"/>&nbsp; <b>AI &amp; ML</b></p>
       <p align="center">
         <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,sklearn" alt="PyTorch, TensorFlow, OpenCV, Scikit-Learn"/>
       </p>
     </td>
-  </tr>
-  <tr>
-    <td valign="top" width="50%">
-      <p align="center"><img src="assets/icons/icon-cloud.svg" width="18" align="center"/>&nbsp; <b>DEVOPS</b></p>
+    <td valign="top" width="34%">
+      <p align="center"><img src="assets/icons/icon-bolt.svg" width="18" align="center"/>&nbsp; <b>DEVOPS</b></p>
       <p align="center">
         <img src="https://skillicons.dev/icons?i=docker,githubactions" alt="Docker, GitHub Actions"/>
       </p>
     </td>
-    <td valign="top" width="50%">
+    <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-ai.svg" width="18" align="center"/>&nbsp; <b>TOOLS</b></p>
       <p align="center">
         <img src="https://skillicons.dev/icons?i=git,postman,jupyter" alt="Git, Postman, Jupyter"/>
