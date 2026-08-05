@@ -37,26 +37,19 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#redGrad)"/>
 
   <g stroke="#C41E3A" fill="none">
-    <circle cx="1012" cy="48" r="122" stroke-opacity="0.5" stroke-width="1.5"/>
-    <circle cx="1012" cy="48" r="100" stroke-opacity="0.3" stroke-width="1.5"/>
-    <circle cx="1012" cy="48" r="78" stroke-opacity="0.16" stroke-width="1"/>
+    <circle cx="1060" cy="60" r="140" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="1060" cy="60" r="110" stroke-opacity="0.25" stroke-width="1"/>
+    <circle cx="1060" cy="60" r="80" stroke-opacity="0.12" stroke-width="1"/>
   </g>
-  <circle cx="1012" cy="48" r="5" fill="url(#redGrad)" opacity="0.9"/>
+  <circle cx="1060" cy="60" r="4" fill="url(#redGrad)" opacity="0.7"/>
 
-  <g stroke="#334155" fill="none" stroke-width="1.5">
-    <circle cx="196" cy="308" r="64" stroke-opacity="0.8"/>
-    <circle cx="196" cy="308" r="44" stroke-opacity="0.6"/>
+  <g stroke="#334155" fill="none" stroke-width="1">
+    <circle cx="180" cy="310" r="70" stroke-opacity="0.6"/>
+    <circle cx="180" cy="310" r="48" stroke-opacity="0.4"/>
   </g>
 
-  <circle cx="884" cy="268" r="3.5" fill="#C41E3A" opacity="0.8"/>
-  <circle cx="918" cy="242" r="2.5" fill="#64748B" opacity="0.9"/>
-  <circle cx="330" cy="76" r="3" fill="#C41E3A" opacity="0.6"/>
-  <circle cx="358" cy="98" r="2" fill="#475569" opacity="0.9"/>
-
-  <path d="M72 250 C 520 222 720 206 1130 192" fill="none" stroke="url(#redGrad)" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-
-  <text x="72" y="112" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="700" fill="#E31E45" letter-spacing="6">SOFTWARE ENGINEER</text>
-  <text x="72" y="196" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="56" font-weight="800" fill="#F8FAFC" letter-spacing="-1.5">Musfiqur Shakib</text>
-  <rect x="74" y="222" width="96" height="5" rx="2.5" fill="url(#redGrad)"/>
-  <text x="72" y="276" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="20" font-weight="500" fill="#CBD5E1" letter-spacing="0.3">Full Stack &#183; AI &#183; Platform Engineering</text>
+  <text x="72" y="108" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#E31E45" letter-spacing="5">SOFTWARE ENGINEER</text>
+  <text x="72" y="180" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="58" font-weight="800" fill="#F8FAFC" letter-spacing="-2">Musfiqur Shakib</text>
+  <rect x="74" y="200" width="80" height="4" rx="2" fill="url(#redGrad)"/>
+  <text x="72" y="250" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="18" font-weight="400" fill="#94A3B8" letter-spacing="0.2">Building Scalable Web Applications &amp; Enterprise Software</text>
 </svg>
