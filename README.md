@@ -157,7 +157,7 @@
 <p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; ACTIVITY GRAPH</b></p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sHakibMusfiqur&amp;custom_title=Musfiqur%20Shakib%20Activity%20Graph&amp;bg_color=ffffff&amp;color=C41E3A&amp;line=C41E3A&amp;point=0B1220&amp;area=true&amp;area_color=C41E3A&amp;title_color=0B1220&amp;hide_border=true&amp;radius=16&amp;height=320&amp;grid=false" alt="GitHub Activity Graph" width="100%"/>
+  <img src="assets/activity-graph.svg" width="100%" alt="Activity Graph — Daily contribution analytics for Musfiqur Shakib"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
