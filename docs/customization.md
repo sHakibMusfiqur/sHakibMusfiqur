@@ -37,28 +37,38 @@ Files that reference it:
 - `README.md` — all card/image URLs
 - `.github/workflows/snake.yml` — reads `github.repository_owner` automatically
   (no change needed)
+- `.github/workflows/stats.yml` — reads `github.repository_owner` automatically
+  (no change needed)
 
 ---
 
 ## 3. Featured Projects
 
-Each project card links two buttons. Point them at your real repositories:
+The six project cards currently show **Coming Soon** badges — they don't point at
+any live repositories yet. When you have real repos, replace each badge in
+**Featured Projects** in `README.md` with a button anchor:
 
-- GitHub cell: Gold standard `https://github.com/YOUR_USER/REPO`
+- GitHub cell: `https://github.com/YOUR_USER/REPO`
 - Live demo cell: deployment URL, e.g. `https://REPO.vercel.app`
 
-Edit the `<a href="...">` anchors inside **Featured Projects** in `README.md`.
+```html
+<a href="https://github.com/YOUR_USER/REPO">
+  <img src="https://img.shields.io/badge/View%20Code-0B1220?style=flat-square" alt="View Code"/>
+</a>
+```
 
 ---
 
 ## 4. Contact Links
 
-Replace the mailto and profile links in the **Contact** section:
+Replace the profile links in the **Contact** section:
 
 ```
-mailto:your-email@example.com
 https://github.com/YOUR_USER
+https://github.com/YOUR_USER?tab=repositories
 ```
+
+There is no public email on the profile by design; add one only if you want it.
 
 ---
 
@@ -84,19 +94,32 @@ You can also trigger it manually from the **Actions** tab.
 
 ## 6. Statistics Cards
 
-All dynamic cards support theming via query parameters:
+**Stats & Top Languages are self-hosted** by `.github/workflows/stats.yml`. The
+job queries the GitHub API directly, renders the two cards (light + dark), and
+pushes them to the `stats` branch. They render from:
+
+```
+https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg
+https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats-dark.svg
+https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs.svg
+https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs-dark.svg
+```
+
+Trigger it from the **Actions** tab (workflow_dispatch) or let it run on the
+daily schedule.
+
+Remaining third-party services:
 
 | Service | Host |
 | --- | --- |
-| Stats & Top Languages | `github-readme-stats.vercel.app` |
 | Streak | `streak-stats.demolab.com` |
-| Trophy | `github-profile-trophy.vercel.app` |
 | Activity Graph | `github-readme-activity-graph.vercel.app` |
 | Typing animation | `readme-typing-svg.demolab.com` |
+| Tech stack icons | `skillicons.dev` |
+| Badges | `img.shields.io` |
 
-Change any color by editing params like `title_color=C41E3A`,
-`text_color=334155`, `bg_color=ffffff`. Refer to each service's own README for
-the full list of options.
+The trophies widget is replaced by a static `assets/achievements.svg` so no
+external trophy service is needed.
 
 ---
 
@@ -107,16 +130,21 @@ ShakibMusfiqur/
 ├── README.md                 # The profile page (HTML + Markdown)
 ├── LICENSE                   # MIT license
 ├── assets/
-│   ├── banner.svg            # Hero banner
+│   ├── banner.svg            # Hero banner (light)
+│   ├── banner-dark.svg       # Hero banner (dark)
 │   ├── divider.svg           # Section divider
-│   ├── footer.svg            # Page footer
-│   ├── profile-bg.svg        # About section background
+│   ├── footer.svg            # Page footer (light)
+│   ├── footer-dark.svg       # Page footer (dark)
+│   ├── profile-bg.svg        # About section background (light)
+│   ├── profile-bg-dark.svg   # About section background (dark)
+│   ├── achievements.svg      # Static achievements card
 │   ├── avatar-frame.svg      # Avatar orbit ring
 │   ├── project-card.svg      # Featured project illustration
 │   ├── icons/                # Custom line icons
 │   └── screenshots/          # Add profile screenshots here
 ├── .github/workflows/
-│   └── snake.yml             # Daily contribution snake job
+│   ├── snake.yml             # Daily contribution snake job
+│   └── stats.yml             # Self-hosted stats + top-langs cards
 └── docs/
     └── customization.md      # You are here
 ```
@@ -126,7 +154,8 @@ ShakibMusfiqur/
 ## 8. Making It Truly Yours
 
 1. `git push origin main` — the profile becomes live.
-2. Watch the **Actions** tab run the snake job once.
+2. Watch the **Actions** tab run the snake and stats jobs once (this creates the
+   `output` and `stats` branches that the cards load from).
 3. Replace contact + project URLs.
 4. Swap the SVG palette in `assets/` if you want a different accent.
 5. Add a screenshot of your rendered profile to `assets/screenshots/`.

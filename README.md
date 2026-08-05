@@ -2,7 +2,11 @@
 
 <!-- 1 · HERO BANNER -->
 <p align="center">
-  <img src="assets/banner.svg" width="100%" alt="Musfiqur Shakib — Software Engineer banner"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="assets/banner.svg"/>
+    <img src="assets/banner.svg" width="100%" alt="Musfiqur Shakib — Software Engineer banner"/>
+  </picture>
 </p>
 
 <!-- 2 · ANIMATED TYPING -->
@@ -32,9 +36,15 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 4 · ABOUT ME -->
-<h3 align="center">ABOUT ME</h3>
+<p align="center"><b>ABOUT ME</b></p>
 
-<p align="center"><img src="assets/profile-bg.svg" width="100%" alt="Profile background"/></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile-bg-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="assets/profile-bg.svg"/>
+    <img src="assets/profile-bg.svg" width="100%" alt="Profile background"/>
+  </picture>
+</p>
 
 <table align="center" width="100%">
   <tr>
@@ -65,7 +75,7 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 5 · CURRENT FOCUS -->
-<h3 align="center"><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; CURRENT FOCUS</h3>
+<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; CURRENT FOCUS</b></p>
 
 <table align="center" width="100%">
   <tr>
@@ -91,67 +101,55 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 6 · SKILLS -->
-<h3 align="center"><img src="assets/icons/icon-code.svg" width="20" align="center"/>&nbsp; SKILLS &amp; EXPERTISE</h3>
+<p align="center"><b><img src="assets/icons/icon-code.svg" width="20" align="center"/>&nbsp; SKILLS &amp; EXPERTISE</b></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/System%20Design-0B1220?style=flat-square" alt="System Design"/>
-  <img src="https://img.shields.io/badge/API%20Architecture-0B1220?style=flat-square" alt="API Architecture"/>
-  <img src="https://img.shields.io/badge/Machine%20Learning-C41E3A?style=flat-square" alt="Machine Learning"/>
-  <img src="https://img.shields.io/badge/CI%2FCD-0B1220?style=flat-square" alt="CI/CD"/>
-  <img src="https://img.shields.io/badge/SaaS%20Product%20Engineering-0B1220?style=flat-square" alt="SaaS Product Engineering"/>
-  <img src="https://img.shields.io/badge/Performance%20Optimization-0B1220?style=flat-square" alt="Performance Optimization"/>
-  <img src="https://img.shields.io/badge/Database%20Design-C41E3A?style=flat-square" alt="Database Design"/>
-  <img src="https://img.shields.io/badge/Team%20Leadership-0B1220?style=flat-square" alt="Team Leadership"/>
+  <img src="https://img.shields.io/badge/System%20Design%20%C2%B7%20Architecture-0B1220?style=flat-square" alt="System Design & Architecture"/>
+  <img src="https://img.shields.io/badge/Machine%20Learning%20%C2%B7%20AI-C41E3A?style=flat-square" alt="Machine Learning & AI"/>
+  <img src="https://img.shields.io/badge/CI%2FCD%20%C2%B7%20DevOps-0B1220?style=flat-square" alt="CI/CD & DevOps"/>
+  <img src="https://img.shields.io/badge/SaaS%20%C2%B7%20API%20Product%20Engineering-0B1220?style=flat-square" alt="SaaS & API Product Engineering"/>
+</p>
+
+<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
+
+<!-- PINNED TECHNOLOGIES -->
+<p align="center"><b><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; PINNED TECHNOLOGIES</b></p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,js,py,php,cpp,nextjs,react,tailwind,nestjs,nodejs,express,mysql,postgres,mongodb,redis,docker,linux,vercel" alt="Pinned technologies — TypeScript, JavaScript, Python, PHP, C++, Next.js, React, Tailwind, NestJS, Node.js, Express, MySQL, PostgreSQL, MongoDB, Redis, Docker, Linux, Vercel"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 7 · TECH STACK -->
-<h3 align="center"><img src="assets/icons/icon-layout.svg" width="20" align="center"/>&nbsp; TECH STACK</h3>
+<p align="center"><b><img src="assets/icons/icon-layout.svg" width="20" align="center"/>&nbsp; TECH STACK</b></p>
 
 <table align="center" width="100%">
   <tr>
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-code.svg" width="18" align="center"/>&nbsp; <b>LANGUAGES</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript"/><br/>
-        <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&amp;logo=javascript&amp;logoColor=000" alt="JavaScript"/><br/>
-        <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python"/><br/>
-        <img src="https://img.shields.io/badge/-PHP-777BB4?style=flat-square&amp;logo=php&amp;logoColor=white" alt="PHP"/><br/>
-        <img src="https://img.shields.io/badge/-C%2B%2B-00599C?style=flat-square&amp;logo=c%2B%2B&amp;logoColor=white" alt="C++"/><br/>
-        <img src="https://img.shields.io/badge/-SQL-4479A1?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="SQL"/>
+        <img src="https://skillicons.dev/icons?i=ts,js,py,php,cpp" alt="TypeScript, JavaScript, Python, PHP, C++"/>
       </p>
     </td>
     <td valign="top" width="34%">
       <p align="center"><img src="assets/icons/icon-layout.svg" width="18" align="center"/>&nbsp; <b>FRONTEND</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-Next.js-000000?style=flat-square&amp;logo=nextdotjs&amp;logoColor=white" alt="Next.js"/><br/>
-        <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&amp;logo=react&amp;logoColor=000" alt="React"/><br/>
-        <img src="https://img.shields.io/badge/-Tailwind-06B6D4?style=flat-square&amp;logo=tailwindcss&amp;logoColor=white" alt="Tailwind CSS"/><br/>
-        <img src="https://img.shields.io/badge/-Framer%20Motion-0055FF?style=flat-square&amp;logo=framer&amp;logoColor=white" alt="Framer Motion"/>
+        <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind" alt="Next.js, React, Tailwind CSS"/>
       </p>
       <p align="center"><img src="assets/icons/icon-server.svg" width="18" align="center"/>&nbsp; <b>BACKEND</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-NestJS-E0234E?style=flat-square&amp;logo=nestjs&amp;logoColor=white" alt="NestJS"/><br/>
-        <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&amp;logo=nodedotjs&amp;logoColor=white" alt="Node.js"/><br/>
-        <img src="https://img.shields.io/badge/-Express-000000?style=flat-square&amp;logo=express&amp;logoColor=white" alt="Express"/><br/>
-        <img src="https://img.shields.io/badge/-Laravel-FF2D20?style=flat-square&amp;logo=laravel&amp;logoColor=white" alt="Laravel"/>
+        <img src="https://skillicons.dev/icons?i=nestjs,nodejs,express,laravel" alt="NestJS, Node.js, Express, Laravel"/>
       </p>
     </td>
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-database.svg" width="18" align="center"/>&nbsp; <b>DATABASE</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&amp;logo=mysql&amp;logoColor=white" alt="MySQL"/><br/>
-        <img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="PostgreSQL"/><br/>
-        <img src="https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&amp;logo=mongodb&amp;logoColor=white" alt="MongoDB"/><br/>
-        <img src="https://img.shields.io/badge/-Redis-FF4438?style=flat-square&amp;logo=redis&amp;logoColor=white" alt="Redis"/>
+        <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,redis" alt="MySQL, PostgreSQL, MongoDB, Redis"/>
       </p>
       <p align="center"><img src="assets/icons/icon-ai.svg" width="18" align="center"/>&nbsp; <b>AI &amp; ML</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch"/><br/>
-        <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&amp;logo=tensorflow&amp;logoColor=white" alt="TensorFlow"/><br/>
-        <img src="https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&amp;logo=opencv&amp;logoColor=white" alt="OpenCV"/><br/>
-        <img src="https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=flat-square&amp;logo=scikitlearn&amp;logoColor=000" alt="Scikit-Learn"/>
+        <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,sklearn" alt="PyTorch, TensorFlow, OpenCV, Scikit-Learn"/>
       </p>
     </td>
   </tr>
@@ -159,32 +157,23 @@
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-cloud.svg" width="18" align="center"/>&nbsp; <b>DEVOPS</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker"/><br/>
-        <img src="https://img.shields.io/badge/-Linux-FCC624?style=flat-square&amp;logo=linux&amp;logoColor=000" alt="Linux"/><br/>
-        <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&amp;logo=githubactions&amp;logoColor=white" alt="GitHub Actions"/><br/>
-        <img src="https://img.shields.io/badge/-Nginx-009639?style=flat-square&amp;logo=nginx&amp;logoColor=white" alt="Nginx"/>
+        <img src="https://skillicons.dev/icons?i=docker,linux,githubactions,nginx" alt="Docker, Linux, GitHub Actions, Nginx"/>
       </p>
     </td>
     <td valign="top" width="34%">
       <p align="center"><img src="assets/icons/icon-cloud.svg" width="18" align="center"/>&nbsp; <b>CLOUD</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-Vercel-000000?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Vercel"/><br/>
-        <img src="https://img.shields.io/badge/-Cloudflare-F38020?style=flat-square&amp;logo=cloudflare&amp;logoColor=white" alt="Cloudflare"/>
+        <img src="https://skillicons.dev/icons?i=vercel,cloudflare" alt="Vercel, Cloudflare"/>
       </p>
       <p align="center"><img src="assets/icons/icon-server.svg" width="18" align="center"/>&nbsp; <b>PRINCIPLES</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-Clean%20Architecture-C41E3A?style=flat-square" alt="Clean Architecture"/><br/>
-        <img src="https://img.shields.io/badge/-REST%20%26%20GraphQL-0B1220?style=flat-square" alt="REST & GraphQL"/><br/>
-        <img src="https://img.shields.io/badge/-Testing-0B1220?style=flat-square" alt="Testing"/>
+        <img src="https://img.shields.io/badge/Clean%20Architecture%20%C2%B7%20REST%20%C2%B7%20GraphQL%20%C2%B7%20Testing-C41E3A?style=flat-square" alt="Clean Architecture · REST · GraphQL · Testing"/>
       </p>
     </td>
     <td valign="top" width="33%">
       <p align="center"><img src="assets/icons/icon-ai.svg" width="18" align="center"/>&nbsp; <b>TOOLS</b></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/-Git-0B1220?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git"/><br/>
-        <img src="https://img.shields.io/badge/-Postman-FF6C37?style=flat-square&amp;logo=postman&amp;logoColor=white" alt="Postman"/><br/>
-        <img src="https://img.shields.io/badge/-Figma-F24E1E?style=flat-square&amp;logo=figma&amp;logoColor=white" alt="Figma"/><br/>
-        <img src="https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter"/>
+        <img src="https://skillicons.dev/icons?i=git,postman,figma,jupyter" alt="Git, Postman, Figma, Jupyter"/>
       </p>
     </td>
   </tr>
@@ -193,7 +182,7 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 8 · FEATURED PROJECTS -->
-<h3 align="center"><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; FEATURED PROJECTS</h3>
+<p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; FEATURED PROJECTS</b></p>
 
 <p align="center"><img src="assets/project-card.svg" width="620" alt="Project card illustration"/></p>
 
@@ -208,8 +197,7 @@
           <br/><br/>
           <code>NestJS · PostgreSQL · Redis · PyTorch</code>
           <br/><br/>
-          <a href="https://github.com/sHakibMusfiqur?tab=repositories"><img src="https://img.shields.io/badge/-View%20Code-0B1220?style=flat-square&amp;logo=github&amp;logoColor=white" alt="View Code"/></a>
-          <a href="https://github.com/sHakibMusfiqur"><img src="https://img.shields.io/badge/-Live%20Demo-C41E3A?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Live Demo"/></a>
+          <img src="https://img.shields.io/badge/-Coming%20Soon-94A3B8?style=flat-square" alt="Coming Soon"/>
         </td></tr>
       </table>
     </td>
@@ -223,8 +211,7 @@
           <br/><br/>
           <code>Laravel · MySQL · Livewire</code>
           <br/><br/>
-          <a href="https://github.com/sHakibMusfiqur?tab=repositories"><img src="https://img.shields.io/badge/-View%20Code-0B1220?style=flat-square&amp;logo=github&amp;logoColor=white" alt="View Code"/></a>
-          <a href="https://github.com/sHakibMusfiqur"><img src="https://img.shields.io/badge/-Live%20Demo-C41E3A?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Live Demo"/></a>
+          <img src="https://img.shields.io/badge/-Coming%20Soon-94A3B8?style=flat-square" alt="Coming Soon"/>
         </td></tr>
       </table>
     </td>
@@ -238,8 +225,7 @@
           <br/><br/>
           <code>Python · OpenCV · TensorFlow · FastAPI</code>
           <br/><br/>
-          <a href="https://github.com/sHakibMusfiqur?tab=repositories"><img src="https://img.shields.io/badge/-View%20Code-0B1220?style=flat-square&amp;logo=github&amp;logoColor=white" alt="View Code"/></a>
-          <a href="https://github.com/sHakibMusfiqur"><img src="https://img.shields.io/badge/-Live%20Demo-C41E3A?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Live Demo"/></a>
+          <img src="https://img.shields.io/badge/-Coming%20Soon-94A3B8?style=flat-square" alt="Coming Soon"/>
         </td></tr>
       </table>
     </td>
@@ -257,8 +243,7 @@
           <br/><br/>
           <code>Next.js · Tailwind · Framer Motion</code>
           <br/><br/>
-          <a href="https://github.com/sHakibMusfiqur?tab=repositories"><img src="https://img.shields.io/badge/-View%20Code-0B1220?style=flat-square&amp;logo=github&amp;logoColor=white" alt="View Code"/></a>
-          <a href="https://github.com/sHakibMusfiqur"><img src="https://img.shields.io/badge/-Live%20Demo-C41E3A?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Live Demo"/></a>
+          <img src="https://img.shields.io/badge/-Coming%20Soon-94A3B8?style=flat-square" alt="Coming Soon"/>
         </td></tr>
       </table>
     </td>
@@ -272,8 +257,7 @@
           <br/><br/>
           <code>React · Node.js · Express</code>
           <br/><br/>
-          <a href="https://github.com/sHakibMusfiqur?tab=repositories"><img src="https://img.shields.io/badge/-View%20Code-0B1220?style=flat-square&amp;logo=github&amp;logoColor=white" alt="View Code"/></a>
-          <a href="https://github.com/sHakibMusfiqur"><img src="https://img.shields.io/badge/-Live%20Demo-C41E3A?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Live Demo"/></a>
+          <img src="https://img.shields.io/badge/-Coming%20Soon-94A3B8?style=flat-square" alt="Coming Soon"/>
         </td></tr>
       </table>
     </td>
@@ -287,8 +271,56 @@
           <br/><br/>
           <code>Next.js · NestJS · MongoDB</code>
           <br/><br/>
-          <a href="https://github.com/sHakibMusfiqur?tab=repositories"><img src="https://img.shields.io/badge/-View%20Code-0B1220?style=flat-square&amp;logo=github&amp;logoColor=white" alt="View Code"/></a>
-          <a href="https://github.com/sHakibMusfiqur"><img src="https://img.shields.io/badge/-Live%20Demo-C41E3A?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Live Demo"/></a>
+          <img src="https://img.shields.io/badge/-Coming%20Soon-94A3B8?style=flat-square" alt="Coming Soon"/>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
+
+<!-- CURRENTLY BUILDING -->
+<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; CURRENTLY BUILDING</b></p>
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="25%">
+      <img src="assets/icons/icon-ai.svg" width="20" alt="AI ERP SaaS"/><br/><br/>
+      <b>AI ERP SaaS</b><br/>
+      <small>AI-driven enterprise planning</small>
+    </td>
+    <td align="center" width="25%">
+      <img src="assets/icons/icon-heart.svg" width="20" alt="Medical Herb AI"/><br/><br/>
+      <b>Medical Herb AI</b><br/>
+      <small>Computer vision for herbal medicine</small>
+    </td>
+    <td align="center" width="25%">
+      <img src="assets/icons/icon-layout.svg" width="20" alt="Portfolio Website"/><br/><br/>
+      <b>Portfolio Website</b><br/>
+      <small>Premium animated personal site</small>
+    </td>
+    <td align="center" width="25%">
+      <img src="assets/icons/icon-cloud.svg" width="20" alt="Facebook Landing Page Builder"/><br/><br/>
+      <b>Facebook Landing Page Builder</b><br/>
+      <small>Drag-and-drop pixel-perfect pages</small>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
+
+<!-- RESEARCH -->
+<p align="center"><b><img src="assets/icons/icon-ai.svg" width="20" align="center"/>&nbsp; RESEARCH</b></p>
+
+<table align="center" width="100%">
+  <tr>
+    <td>
+      <table border="1" width="100%" cellpadding="16">
+        <tr><td align="center">
+          <b>Spatial Attention Based Multi-scale Feature Fusion Medical Herb Identification</b>
+          <br/><br/>
+          <small>Computer vision research applying spatial attention and multi-scale feature fusion to medicinal herb recognition.</small>
         </td></tr>
       </table>
     </td>
@@ -298,12 +330,16 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 9 · GITHUB STATISTICS · 10 · GITHUB STREAK -->
-<h3 align="center"><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; GITHUB STATISTICS &amp; STREAK</h3>
+<p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; GITHUB STATISTICS &amp; STREAK</b></p>
 
 <table align="center" width="100%">
   <tr>
     <td align="center" valign="middle" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=sHakibMusfiqur&amp;show_icons=true&amp;include_all_commits=true&amp;count_private=true&amp;hide_border=true&amp;border_radius=16&amp;bg_color=ffffff&amp;title_color=C41E3A&amp;text_color=334155&amp;icon_color=C41E3A&amp;card_width=445&amp;rank_icon=github" alt="GitHub Statistics" width="460"/>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats-dark.svg"/>
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg"/>
+        <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/stats.svg" alt="GitHub Statistics" width="470"/>
+      </picture>
     </td>
     <td align="center" valign="middle" width="50%">
       <img src="https://streak-stats.demolab.com?user=sHakibMusfiqur&amp;background=ffffff&amp;border=E2E8F0&amp;stroke=C41E3A&amp;ring=C41E3A&amp;fire=C41E3A&amp;currStreakNum=0B1220&amp;sideNums=334155&amp;currStreakLabel=C41E3A&amp;sideLabels=64748B&amp;dates=64748B&amp;hide_border=true&amp;border_radius=16&amp;card_width=445&amp;mode=daily" alt="GitHub Streak" width="460"/>
@@ -312,25 +348,29 @@
 </table>
 
 <!-- 11 · TOP LANGUAGES -->
-<h3 align="center"><img src="assets/icons/icon-code.svg" width="20" align="center"/>&nbsp; TOP LANGUAGES</h3>
+<p align="center"><b><img src="assets/icons/icon-code.svg" width="20" align="center"/>&nbsp; TOP LANGUAGES</b></p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sHakibMusfiqur&amp;layout=compact&amp;langs_count=8&amp;hide_border=true&amp;border_radius=16&amp;bg_color=ffffff&amp;title_color=C41E3A&amp;text_color=334155&amp;icon_color=C41E3A&amp;card_width=640" alt="Top Languages" width="640"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs.svg"/>
+    <img src="https://raw.githubusercontent.com/sHakibMusfiqur/sHakibMusfiqur/stats/top-langs.svg" alt="Top Languages" width="640"/>
+  </picture>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 12 · GITHUB TROPHY -->
-<h3 align="center"><img src="assets/icons/icon-ai.svg" width="20" align="center"/>&nbsp; GITHUB TROPHIES</h3>
+<!-- 12 · GITHUB ACHIEVEMENTS -->
+<p align="center"><b><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; GITHUB ACHIEVEMENTS</b></p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sHakibMusfiqur&amp;theme=flat&amp;no-bg=true&amp;no-frame=true&amp;title_color=C41E3A&amp;text_color=0B1220&amp;icon_color=0B1220&amp;column=7&amp;row=2&amp;margin-w=14&amp;margin-h=14" alt="GitHub Trophies"/>
+  <img src="assets/achievements.svg" width="100%" alt="GitHub Achievements"/>
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 13 · CONTRIBUTION SNAKE -->
-<h3 align="center"><img src="assets/icons/icon-server.svg" width="20" align="center"/>&nbsp; CONTRIBUTION SNAKE</h3>
+<p align="center"><b><img src="assets/icons/icon-server.svg" width="20" align="center"/>&nbsp; CONTRIBUTION SNAKE</b></p>
 
 <p align="center">
   <picture>
@@ -343,7 +383,7 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 14 · ACTIVITY GRAPH -->
-<h3 align="center"><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; ACTIVITY GRAPH</h3>
+<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; ACTIVITY GRAPH</b></p>
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=sHakibMusfiqur&amp;custom_title=Musfiqur%20Shakib%20Activity%20Graph&amp;bg_color=ffffff&amp;color=C41E3A&amp;line=C41E3A&amp;point=0B1220&amp;area=true&amp;area_color=C41E3A&amp;title_color=0B1220&amp;hide_border=true&amp;radius=16&amp;height=320&amp;grid=false" alt="GitHub Activity Graph" width="100%"/>
@@ -352,7 +392,7 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 15 · CODING PHILOSOPHY -->
-<h3 align="center"><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; CODING PHILOSOPHY</h3>
+<p align="center"><b><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; CODING PHILOSOPHY</b></p>
 
 <table align="center" width="100%">
   <tr>
@@ -391,31 +431,31 @@
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
 <!-- 16 · DEVELOPMENT WORKFLOW -->
-<h3 align="center"><img src="assets/icons/icon-compass.svg" width="20" align="center"/>&nbsp; DEVELOPMENT WORKFLOW</h3>
+<p align="center"><b><img src="assets/icons/icon-compass.svg" width="20" align="center"/>&nbsp; DEVELOPMENT WORKFLOW</b></p>
 
 <table align="center" width="100%">
   <tr>
-    <td align="center" valign="middle" width="16%">
+    <td align="center" valign="middle" width="18%">
       <img src="assets/icons/icon-compass.svg" width="22" alt="Discover"/><br/><b>DISCOVER</b><br/>
       <small>Understand the problem</small>
     </td>
-    <td align="center" valign="middle" width="6%"><img src="assets/icons/icon-arrow.svg" width="20" alt="next"/></td>
-    <td align="center" valign="middle" width="16%">
+    <td align="center" valign="middle" width="2.5%"><img src="assets/icons/icon-arrow.svg" width="18" alt="next"/></td>
+    <td align="center" valign="middle" width="18%">
       <img src="assets/icons/icon-layout.svg" width="22" alt="Design"/><br/><b>DESIGN</b><br/>
       <small>Model &amp; architect</small>
     </td>
-    <td align="center" valign="middle" width="6%"><img src="assets/icons/icon-arrow.svg" width="20" alt="next"/></td>
-    <td align="center" valign="middle" width="16%">
+    <td align="center" valign="middle" width="2.5%"><img src="assets/icons/icon-arrow.svg" width="18" alt="next"/></td>
+    <td align="center" valign="middle" width="18%">
       <img src="assets/icons/icon-code.svg" width="22" alt="Build"/><br/><b>BUILD</b><br/>
       <small>Ship clean code</small>
     </td>
-    <td align="center" valign="middle" width="6%"><img src="assets/icons/icon-arrow.svg" width="20" alt="next"/></td>
-    <td align="center" valign="middle" width="16%">
+    <td align="center" valign="middle" width="2.5%"><img src="assets/icons/icon-arrow.svg" width="18" alt="next"/></td>
+    <td align="center" valign="middle" width="18%">
       <img src="assets/icons/icon-cloud.svg" width="22" alt="Deploy"/><br/><b>DEPLOY</b><br/>
       <small>Release with CI/CD</small>
     </td>
-    <td align="center" valign="middle" width="6%"><img src="assets/icons/icon-arrow.svg" width="20" alt="next"/></td>
-    <td align="center" valign="middle" width="16%">
+    <td align="center" valign="middle" width="2.5%"><img src="assets/icons/icon-arrow.svg" width="18" alt="next"/></td>
+    <td align="center" valign="middle" width="18%">
       <img src="assets/icons/icon-bolt.svg" width="22" alt="Iterate"/><br/><b>ITERATE</b><br/>
       <small>Measure &amp; improve</small>
     </td>
@@ -424,13 +464,51 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 17 · CONTACT -->
-<h3 align="center"><img src="assets/icons/icon-mail.svg" width="20" align="center"/>&nbsp; LET'S CONNECT</h3>
+<!-- PROFESSIONAL TIMELINE -->
+<p align="center"><b><img src="assets/icons/icon-compass.svg" width="20" align="center"/>&nbsp; PROFESSIONAL TIMELINE</b></p>
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" valign="middle" width="24%">
+      <b>Student</b><br/>
+      <small>Foundation in computing</small>
+    </td>
+    <td align="center" valign="middle" width="4%"><small><b>&#8595;</b></small></td>
+    <td align="center" valign="middle" width="24%">
+      <b>Full Stack Developer</b><br/>
+      <small>Full-stack web engineering</small>
+    </td>
+    <td align="center" valign="middle" width="4%"><small><b>&#8595;</b></small></td>
+    <td align="center" valign="middle" width="24%">
+      <b>AI Engineer</b><br/>
+      <small>Applied machine learning</small>
+    </td>
+    <td align="center" valign="middle" width="4%"><small><b>&#8595;</b></small></td>
+    <td align="center" valign="middle" width="24%">
+      <b>Platform Engineer</b><br/>
+      <small>Scalable systems &amp; infrastructure</small>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
+
+<!-- NOW LEARNING -->
+<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; NOW LEARNING</b></p>
 
 <p align="center">
-  <a href="mailto:musfiqurshakib.dev@gmail.com">
-    <img src="https://img.shields.io/badge/-Email-C41E3A?style=flat-square&amp;logo=gmail&amp;logoColor=white" alt="Email"/>
-  </a>
+  <img src="https://img.shields.io/badge/Cloud-0B1220?style=flat-square" alt="Cloud"/>
+  <img src="https://img.shields.io/badge/DevOps-0B1220?style=flat-square" alt="DevOps"/>
+  <img src="https://img.shields.io/badge/AI%20Systems-C41E3A?style=flat-square" alt="AI Systems"/>
+  <img src="https://img.shields.io/badge/Distributed%20Systems-C41E3A?style=flat-square" alt="Distributed Systems"/>
+</p>
+
+<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
+
+<!-- 17 · CONTACT -->
+<p align="center"><b><img src="assets/icons/icon-mail.svg" width="20" align="center"/>&nbsp; LET'S CONNECT</b></p>
+
+<p align="center">
   <a href="https://github.com/sHakibMusfiqur">
     <img src="https://img.shields.io/badge/-GitHub-0B1220?style=flat-square&amp;logo=github&amp;logoColor=white" alt="GitHub"/>
   </a>
@@ -445,4 +523,10 @@
 </p>
 
 <!-- 18 · FOOTER -->
-<p align="center"><img src="assets/footer.svg" width="100%" alt="Footer"/></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="assets/footer.svg"/>
+    <img src="assets/footer.svg" width="100%" alt="Footer"/>
+  </picture>
+</p>

@@ -1,0 +1,131 @@
+# Generates and commits self-hosted GitHub statistics cards as SVG.
+# This removes the dependency on the flaky public github-readme-stats instance,
+# so the stats and top-languages cards always render.
+# Output is pushed to the `stats` branch and read via raw.githubusercontent.com.
+
+name: Generate Stats SVGs
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate stats and top-languages SVGs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          cat > /tmp/gen_stats.py <<'PY'
+          #!/usr/bin/env python3
+          import json, os, sys, urllib.request
+
+          RED="#C41E3A"; INK="#0B1220"; BODY="#334155"; MUTED="#64748B"
+          BORDER="#E2E8F0"; SURFACE="#F8FAFC"; API="https://api.github.com"
+
+          def gh(path, token):
+              req=urllib.request.Request(API+path)
+              req.add_header("Accept","application/vnd.github+json")
+              req.add_header("User-Agent","profile-stats-action")
+              if token: req.add_header("Authorization","Bearer "+token)
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return json.loads(r.read().decode("utf-8"))
+
+          def esc(s):
+              return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+
+          def fmt(n): return f"{int(n):,}"
+
+          user=sys.argv[1]; token=os.environ.get("GITHUB_TOKEN",""); outdir=sys.argv[2]
+          ui=gh(f"/users/{user}", token)
+          followers=int(ui.get("followers",0)); repos=int(ui.get("public_repos",0))
+          stars=forks=0; langs={}; page=1
+          while True:
+              data=gh(f"/users/{user}/repos?per_page=100&page={page}&type=owner", token)
+              if not data: break
+              for repo in data:
+                  stars+=int(repo.get("stargazers_count",0) or 0)
+                  forks+=int(repo.get("forks_count",0) or 0)
+                  lg=repo.get("language")
+                  if lg: langs[lg]=langs.get(lg,0)+1
+              if len(data)<100: break
+              page+=1
+
+          def header(title,w):
+              return (f'<rect x="0.5" y="0.5" width="{w-1}" height="99.5" rx="16" fill="#FFFFFF" '
+                      f'stroke="{BORDER}"/>'
+                      f'<rect x="24" y="24" width="5" height="22" rx="2.5" fill="{RED}"/>'
+                      f'<text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Arial, sans-serif" '
+                      f'font-size="15" font-weight="700" fill="{INK}" letter-spacing="1.5">{esc(title)}</text>')
+
+          rows=[("Repositories",repos),("Followers",followers),("Stars earned",stars),("Forks",forks)]
+          w=470; h=64+40*len(rows)+24
+          out=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" '
+               f'role="img" aria-label="GitHub statistics for {esc(user)}">', header("GITHUB STATISTICS",w)]
+          y=104
+          for label,value in rows:
+              out.append(f'<text x="40" y="{y}" font-family="-apple-system, \'Segoe UI\', Roboto, Arial, sans-serif" '
+                         f'font-size="14" font-weight="500" fill="{MUTED}">{esc(label)}</text>'
+                         f'<text x="{w-40}" text-anchor="end" y="{y}" font-family="ui-monospace, SFMono-Regular, \'SF Mono\', Consolas, monospace" '
+                         f'font-size="15" font-weight="700" fill="{INK}">{esc(fmt(value))}</text>')
+              y+=40
+          out.append(f'<text x="24" y="{h-12}" font-family="-apple-system, \'Segoe UI\', Roboto, Arial, sans-serif" '
+                     f'font-size="10.5" fill="{MUTED}">github.com/{esc(user)}</text></svg>')
+          open(os.path.join(outdir,"stats.svg"),"w",encoding="utf-8").write("\n".join(out))
+
+          total=sum(langs.values()) or 1
+          top=sorted(langs.items(),key=lambda kv:kv[1],reverse=True)[:6] or [("N/A",1)]
+          w=640; rh=46; h=64+len(top)*rh+24
+          out=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" '
+               f'role="img" aria-label="Top languages for {esc(user)}">', header("TOP LANGUAGES",w)]
+          y=100
+          for name,count in top:
+              pct=count/total*100; barmax=w-80; barw=barmax*pct/100
+              out.append(f'<text x="40" y="{y}" font-family="-apple-system, \'Segoe UI\', Roboto, Arial, sans-serif" '
+                         f'font-size="13.5" font-weight="600" fill="{INK}">{esc(name)}</text>'
+                         f'<text x="{w-40}" text-anchor="end" y="{y}" font-family="ui-monospace, SFMono-Regular, \'SF Mono\', Consolas, monospace" '
+                         f'font-size="12.5" fill="{MUTED}">{pct:.1f}%</text>'
+                         f'<rect x="40" y="{y+9}" width="{barmax}" height="7" rx="3.5" fill="{SURFACE}"/>'
+                         f'<rect x="40" y="{y+9}" width="{barw:.1f}" height="7" rx="3.5" fill="{RED}"/>')
+              y+=rh
+          out.append("</svg>")
+          open(os.path.join(outdir,"top-langs.svg"),"w",encoding="utf-8").write("\n".join(out))
+
+          dark_map={"#FFFFFF":"#0B1220","#F8FAFC":"#1E293B","#E2E8F0":"#1E293B",
+                    "#0B1220":"#F1F5F9","#334155":"#E2E8F0","#64748B":"#94A3B8"}
+          for name in ("stats.svg","top-langs.svg"):
+              src=open(os.path.join(outdir,name),encoding="utf-8").read()
+              for k,v in dark_map.items():
+                  src=src.replace(k,v)
+              open(os.path.join(outdir,name.replace(".svg","-dark.svg")),"w",encoding="utf-8").write(src)
+          print(f"Generated for {user} (light + dark)")
+          PY
+          mkdir -p dist
+          GITHUB_TOKEN="$GH_TOKEN" python3 /tmp/gen_stats.py "$OWNER" dist
+
+      - name: Push SVGs to the stats branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: stats
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Workflow summary
+        run: |
+          echo "## Stats SVGs Generated" >> $GITHUB_STEP_SUMMARY
+          echo "- Committed to the **stats** branch" >> $GITHUB_STEP_SUMMARY
+          echo "- `stats.svg` + `top-langs.svg` (+ dark variants)" >> $GITHUB_STEP_SUMMARY
