@@ -62,44 +62,6 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- 5 · CURRENT FOCUS -->
-<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; CURRENT FOCUS</b></p>
-
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="25%">
-      <b>Enterprise SaaS</b><br/>
-      <small>Multi-tenant platforms with clean domain modeling</small>
-    </td>
-    <td align="center" width="25%">
-      <b>AI Productization</b><br/>
-      <small>From trained models to APIs people trust</small>
-    </td>
-    <td align="center" width="25%">
-      <b>Scalable Backends</b><br/>
-      <small>Event-driven services built to grow without pain</small>
-    </td>
-    <td align="center" width="25%">
-      <b>Platform &amp; DX</b><br/>
-      <small>Internal tools and pipelines that speed everyone up</small>
-    </td>
-  </tr>
-</table>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
-<!-- 6 · SKILLS -->
-<p align="center"><b><img src="assets/icons/icon-code.svg" width="20" align="center"/>&nbsp; SKILLS &amp; EXPERTISE</b></p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/System%20Design%20%C2%B7%20Architecture-0B1220?style=flat-square" alt="System Design & Architecture"/>
-  <img src="https://img.shields.io/badge/Machine%20Learning%20%C2%B7%20AI-C41E3A?style=flat-square" alt="Machine Learning & AI"/>
-  <img src="https://img.shields.io/badge/CI%2FCD%20%C2%B7%20DevOps-0B1220?style=flat-square" alt="CI/CD & DevOps"/>
-  <img src="https://img.shields.io/badge/SaaS%20%C2%B7%20API%20Product%20Engineering-0B1220?style=flat-square" alt="SaaS & API Product Engineering"/>
-</p>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
 <!-- PINNED TECHNOLOGIES -->
 <p align="center"><b><img src="assets/icons/icon-heart.svg" width="20" align="center"/>&nbsp; PINNED TECHNOLOGIES</b></p>
 
@@ -266,55 +228,6 @@
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
-<!-- CURRENTLY BUILDING -->
-<p align="center"><b><img src="assets/icons/icon-bolt.svg" width="20" align="center"/>&nbsp; CURRENTLY BUILDING</b></p>
-
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="25%">
-      <img src="assets/icons/icon-ai.svg" width="20" alt="AI ERP SaaS"/><br/><br/>
-      <b>AI ERP SaaS</b><br/>
-      <small>AI-driven enterprise planning</small>
-    </td>
-    <td align="center" width="25%">
-      <img src="assets/icons/icon-heart.svg" width="20" alt="Medical Herb AI"/><br/><br/>
-      <b>Medical Herb AI</b><br/>
-      <small>Computer vision for herbal medicine</small>
-    </td>
-    <td align="center" width="25%">
-      <img src="assets/icons/icon-layout.svg" width="20" alt="Portfolio Website"/><br/><br/>
-      <b>Portfolio Website</b><br/>
-      <small>Premium animated personal site</small>
-    </td>
-    <td align="center" width="25%">
-      <img src="assets/icons/icon-cloud.svg" width="20" alt="Facebook Landing Page Builder"/><br/><br/>
-      <b>Facebook Landing Page Builder</b><br/>
-      <small>Drag-and-drop pixel-perfect pages</small>
-    </td>
-  </tr>
-</table>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
-<!-- RESEARCH -->
-<p align="center"><b><img src="assets/icons/icon-ai.svg" width="20" align="center"/>&nbsp; RESEARCH</b></p>
-
-<table align="center" width="100%">
-  <tr>
-    <td>
-      <table border="1" width="100%" cellpadding="16">
-        <tr><td align="center">
-          <b>Spatial Attention Based Multi-scale Feature Fusion Medical Herb Identification</b>
-          <br/><br/>
-          <small>Computer vision research applying spatial attention and multi-scale feature fusion to medicinal herb recognition.</small>
-        </td></tr>
-      </table>
-    </td>
-  </tr>
-</table>
-
-<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
 <!-- 9 · GITHUB STATS DASHBOARD -->
 <p align="center"><b><img src="assets/icons/icon-github.svg" width="20" align="center"/>&nbsp; GITHUB STATS</b></p>
 
@@ -345,19 +258,3 @@
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
-
-<!-- 18 · FOOTER QUOTE -->
-<p align="center">
-  <i>"Simplicity is the ultimate sophistication — build software that
-  outlives the hype."</i><br/>
-  <small>&#8212; Musfiqur Shakib</small>
-</p>
-
-<!-- 19 · FOOTER -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="assets/footer.svg"/>
-    <img src="assets/footer.svg" width="100%" alt="Footer"/>
-  </picture>
-</p>
