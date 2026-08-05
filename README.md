@@ -70,19 +70,13 @@
     </td>
   </tr>
   <tr>
-    <td valign="top" width="33%">
+    <td valign="top" width="50%">
       <p align="center"><img src="assets/icons/icon-cloud.svg" width="18" align="center"/>&nbsp; <b>DEVOPS</b></p>
       <p align="center">
         <img src="https://skillicons.dev/icons?i=docker,githubactions" alt="Docker, GitHub Actions"/>
       </p>
     </td>
-    <td valign="top" width="34%">
-      <p align="center"><img src="assets/icons/icon-server.svg" width="18" align="center"/>&nbsp; <b>PRINCIPLES</b></p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Clean%20Architecture%20%C2%B7%20REST%20%C2%B7%20GraphQL%20%C2%B7%20Testing-C41E3A?style=flat-square" alt="Clean Architecture · REST · GraphQL · Testing"/>
-      </p>
-    </td>
-    <td valign="top" width="33%">
+    <td valign="top" width="50%">
       <p align="center"><img src="assets/icons/icon-ai.svg" width="18" align="center"/>&nbsp; <b>TOOLS</b></p>
       <p align="center">
         <img src="https://skillicons.dev/icons?i=git,postman,jupyter" alt="Git, Postman, Jupyter"/>
