@@ -34,31 +34,14 @@
 <!-- 4 · ABOUT ME -->
 <p align="center"><b>ABOUT ME</b></p>
 
-<table align="center" width="100%">
-  <tr>
-    <td align="center" valign="middle" width="30%">
-      <img src="https://github.com/sHakibMusfiqur.png" width="180" alt="Musfiqur Shakib avatar"/>
-      <br/>
-      <img src="assets/avatar-frame.svg" width="210" alt="Avatar orbit frame"/>
-    </td>
-    <td valign="middle" width="70%">
-      <p>
-        Hi, I'm <b>Musfiqur Shakib</b> — a software engineer who loves turning
-        complex problems into elegant, production-grade systems.
-      </p>
-      <p>
-        I work across the entire stack: designing resilient APIs, building
-        performant frontends, training and serving AI models, and shipping
-        cloud-native infrastructure that stays boring in production.
-      </p>
-      <p>
-        My sweet spot is the intersection of <b>engineering discipline</b> and
-        <b>product taste</b> — writing code that is fast, testable, and a joy to
-        maintain.
-      </p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  Hi, I'm <b>Musfiqur Shakib</b> — I enjoy turning complex problems into
+  elegant, production-grade systems.
+</p>
+<p align="center">
+  My sweet spot is the intersection of <b>engineering discipline</b> and
+  <b>product taste</b> — writing code that is fast, testable, and a joy to maintain.
+</p>
 
 <p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
 
