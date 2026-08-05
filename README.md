@@ -522,7 +522,16 @@
   that makes developers more productive.
 </p>
 
-<!-- 18 · FOOTER -->
+<p align="center"><img src="assets/divider.svg" width="560" alt="divider"/></p>
+
+<!-- 18 · FOOTER QUOTE -->
+<p align="center">
+  <i>"Simplicity is the ultimate sophistication — build software that
+  outlives the hype."</i><br/>
+  <small>&#8212; Musfiqur Shakib</small>
+</p>
+
+<!-- 19 · FOOTER -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"/>
