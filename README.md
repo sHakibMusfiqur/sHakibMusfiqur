@@ -8,7 +8,7 @@
 <!-- 2 · ANIMATED TYPING -->
 <p align="center">
   <a href="https://github.com/sHakibMusfiqur">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=24&amp;duration=3200&amp;pause=700&amp;color=C41E3A&amp;center=true&amp;vCenter=true&amp;multiline=false&amp;width=1000&amp;height=70&amp;lines=Software+Engineer;Full+Stack+Developer" alt="Animated typing — Musfiqur Shakib roles"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=24&amp;duration=3200&amp;pause=700&amp;color=C41E3A&amp;center=true&amp;vCenter=true&amp;multiline=false&amp;width=1000&amp;height=70&amp;lines=Software+Engineer" alt="Animated typing — Musfiqur Shakib roles"/>
   </a>
 </p>
 
